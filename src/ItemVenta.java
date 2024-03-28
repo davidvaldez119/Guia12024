@@ -3,6 +3,12 @@ public class ItemVenta {
     private String descripcion;
     private int cantidad;
 
+    public ItemVenta(int id, String descripcion,int cantidad,Float presioUnitario ) {
+        this.id=id;
+        this.descripcion = descripcion;
+        this.cantidad=cantidad;
+        this.presioUnitario=presioUnitario;
+    }
     public Float getPresioUnitario() {
         return presioUnitario;
     }
@@ -33,16 +39,14 @@ public class ItemVenta {
 
     private Float presioUnitario;
 
-    public ItemVenta(int id, String descripcion,int cantidad,Float presioUnitario ) {
-        this.id=id;
-        this.descripcion = descripcion;
-        this.cantidad=cantidad;
-        this.presioUnitario=presioUnitario;
-    }
+
     public int getId() {
         return id;
     }
 
+    public double precioTotal(int cant){
+        return presioUnitario*cant;
+    }
     @Override
     public String toString() {
         return "ItemVenta{" +

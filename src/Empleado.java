@@ -1,5 +1,4 @@
 public class Empleado {
-<<<<<<< HEAD
     private int dni;
     private String nombreYapellido;
     private  float salario;
@@ -11,32 +10,8 @@ public class Empleado {
     }
 
 
-=======
-    private String dni;
-    private String nombreYapellido;
-    private  float salario;
-
->>>>>>> origin/master
     public String getNombreYapellido() {
         return nombreYapellido;
-    }
-    public void setNombreYapellido(String nombreYapellido) {
-        this.nombreYapellido = nombreYapellido;
-    }
-<<<<<<< HEAD
-    public int getDni() {
-        return dni;
-    }
-
-    public void setDni(int  dni) {
-=======
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
->>>>>>> origin/master
-        this.dni = dni;
     }
 
     public float getSalario() {
@@ -46,30 +21,38 @@ public class Empleado {
     public void setSalario(float salario) {
         this.salario = salario;
     }
-    public float aumentaSalario(float porc, float salario){
 
-<<<<<<< HEAD
-        return (salario)*(porc)/100 +salario ;
-    }
-    public  float salarioAnual(float salario){
-
-        return 12*salario;
-    }
-=======
-        return (porc*salario)/100;
+    public void setNombreYapellido(String nombreYapellido) {
+        this.nombreYapellido = nombreYapellido;
     }
 
->>>>>>> origin/master
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
+    public double aumentaSalario(double porc){
+        return (getSalario())*(porc/100) + getSalario();
+    }
+
+    public double salarioAnual(){
+
+        return 12*getSalario();
+    }
     @Override
     public String toString() {
         return "Empleado{" +
-                "dni='" + dni + '\'' +
+                "dni=" + dni +
                 ", nombreYapellido='" + nombreYapellido + '\'' +
                 ", salario=" + salario +
                 '}';
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 }
+
+
+
+
+

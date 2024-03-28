@@ -31,14 +31,16 @@ public class CuentBancaria {
 
     public double credito (double montoDeposito){
 
-        return balance+montoDeposito;
+        return balance=balance+montoDeposito;
     }
 
     public double debito(double montoExtracion){
         if(montoExtracion>balance ){
-            System.out.println("saldo insuficiente no es posible extraccion");
-        }
-       return balance-montoExtracion;
+            System.out.println("saldo insuficiente NO ES POSIBLE LA EXTRACCION...... su saldo actual es de :  ");
+        }else{
+        balance=balance-montoExtracion;
+    }
+        return balance;
     }
     @Override
     public String toString() {
